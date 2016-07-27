@@ -5,7 +5,11 @@
     var app=angular.module('myApp',[]);
     app.controller('BusinessCardController', function(){
         this.user={
-            name:'Shoaib Khan'
+            name:'John Doe',
+            about:'Hi! I am John. A Passionate Coder and a voracious Reader.',
+            occupation:'Software Developer',
+            email:'johnDoe@example.org',
+            contact:'+9112345678'
         };
     });
 

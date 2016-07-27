@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="BusinessCardController as businessCtrl">
+<html lang="en" ng-app="myApp" ng-controller="BusinessCardController as businessCtrl"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +13,45 @@
     <title>{{businessCtrl.user.name}} | Business Card</title>
 </head>
 <body>
+
+<div class="half">
+<form name="myForm">
+
+<!--  Review Form -->
+    <h4>Submit your details</h4>&nbsp;
+    <fieldset class="form-group">
+        <label>Full Name</label>
+        <input class="form-control"  type="text" placeholder="John Doe" title="Full Name"/>
+
+    </fieldset>
+    <fieldset class="form-group">
+        <label>About Yourself</label>
+        <textarea class="form-control" placeholder="Hi! I am John. A Passionate Coder and a voracious Reader." title="About Me"></textarea>
+
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Your Occupation</label>
+        <input type="text" class="form-control" placeholder="Software Developer" title="Occupation" />
+    </fieldset>
+    <fieldset class="form-group">
+        <label>E-Mail</label>
+        <input type="email" class="form-control" placeholder="johnDoe@example.org" title="Email" />
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Contact Number</label>
+        <input type="tel" class="form-control" placeholder="+9112345678" title="Contact Number" />
+    </fieldset>
+
+
+<!--<fieldset class="form-group">
+    <input type="submit" class="btn btn-primary pull-right" value="Generate Business Card" />
+</fieldset>-->
+</form>
+</div>
+<div class="half">
+
+</div>
+
 </body>
 </html>
 
