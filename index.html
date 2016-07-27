@@ -2,12 +2,16 @@
 <html lang="en" ng-app="myApp" ng-controller="BusinessCardController as businessCtrl">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-    <script type="text/css" src="bower_components/bootstrap/dist/css/bootstrap.min.css"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <title ng-bind="">{{businessCtrl.name}}</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>{{businessCtrl.user.name}} | Business Card</title>
 </head>
 <body>
-<p>{{businessCtrl.user.name}}</p>
 </body>
 </html>
+
