@@ -14,32 +14,33 @@
 </head>
 <body>
 
-<div class="half">
+<div class="wrap">
+    <div class="fleft">
 <form name="myForm">
 
 <!--  Review Form -->
     <h4>Submit your details</h4>&nbsp;
     <fieldset class="form-group">
         <label>Full Name</label>
-        <input class="form-control"  type="text" placeholder="John Doe" title="Full Name"/>
+        <input ng-model="businessCtrl.user.name" class="form-control"  type="text" placeholder="John Doe" title="Full Name"/>
 
     </fieldset>
     <fieldset class="form-group">
         <label>About Yourself</label>
-        <textarea class="form-control" placeholder="Hi! I am John. A Passionate Coder and a voracious Reader." title="About Me"></textarea>
+        <textarea ng-model="businessCtrl.user.about" class="form-control" placeholder="Hi! I am John. A Passionate Coder and a voracious Reader." title="About Me"></textarea>
 
     </fieldset>
     <fieldset class="form-group">
         <label>Your Occupation</label>
-        <input type="text" class="form-control" placeholder="Software Developer" title="Occupation" />
+        <input ng-model="businessCtrl.user.occupation" type="text" class="form-control" placeholder="Software Developer" title="Occupation" />
     </fieldset>
     <fieldset class="form-group">
         <label>E-Mail</label>
-        <input type="email" class="form-control" placeholder="johnDoe@example.org" title="Email" />
+        <input ng-model="businessCtrl.user.email" vtype="email" class="form-control" placeholder="johnDoe@example.org" title="Email" novalidate/>
     </fieldset>
     <fieldset class="form-group">
         <label>Contact Number</label>
-        <input type="tel" class="form-control" placeholder="+9112345678" title="Contact Number" />
+        <input ng-model="businessCtrl.user.contact" type="tel" class="form-control" placeholder="+9112345678" title="Contact Number" novalidate/>
     </fieldset>
 
 
@@ -47,8 +48,58 @@
     <input type="submit" class="btn btn-primary pull-right" value="Generate Business Card" />
 </fieldset>-->
 </form>
+        </div>
 </div>
-<div class="half">
+<div class="fright">
+    <div class="half_right">
+        <h1 style="margin-left:30%;">BUSINESS CARD</h1>
+
+
+
+        <!--
+        <div><h2 class="panel-title">{{businessCtrl.user.name}}</h2>
+        </div>
+        <p>{{businessCtrl.user.about}}
+        </p>
+        <p>{{businessCtrl.user.occupation}}
+        </p>
+        <p>{{businessCtrl.user.email}}
+        </p>
+        <p>{{businessCtrl.user.contact}}
+        </p></div>-->
+
+
+
+        <div class="card" style="
+   background: -webkit-linear-gradient(top, {{ businessCtrl.user.color1 }} , {{ businessCtrl.user.color2 }});
+
+   color:{{ businessCtrl.user.textcolor1 }};">
+
+
+
+            <div class="details" style="margin-left: 10%">
+                <h1>{{businessCtrl.user.name }}</h1>
+                <h5 style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.occupation }}</h5>
+
+                <hr width="80%" style="margin-right: 20%">
+
+                <p style="color:{{ businessCtrl.user.textcolor2 }};">
+                    <a ng-href="mailto:{{ businessCtrl.user.email }}">{{ businessCtrl.user.email }}</a>
+                </p>
+
+                <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.contact }}</p>
+
+                <!--<p style="color:{{ businessCtrl.user.textcolor2 }};">
+                    <a ng-href="http://{{ businessCtrl.user.link2 }}">{{ businessCtrl.user.link2 }}</a>
+                </p>-->
+
+
+            </div>
+        </div>
+
+        <!--- Second accordion would go here -->
+    </div>
+
 
 </div>
 
