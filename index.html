@@ -26,18 +26,20 @@
 
     </fieldset>
     <fieldset class="form-group">
-        <label>About Yourself</label>
-        <textarea ng-model="businessCtrl.user.about" class="form-control" placeholder="Hi! I am John. A Passionate Coder and a voracious Reader." title="About Me"></textarea>
-
-    </fieldset>
-    <fieldset class="form-group">
         <label>Your Occupation</label>
         <input ng-model="businessCtrl.user.occupation" type="text" class="form-control" placeholder="Software Developer" title="Occupation" />
     </fieldset>
     <fieldset class="form-group">
         <label>E-Mail</label>
-        <input ng-model="businessCtrl.user.email" vtype="email" class="form-control" placeholder="johnDoe@example.org" title="Email" novalidate/>
+        <input ng-model="businessCtrl.user.email" type="email" class="form-control" placeholder="johnDoe@example.org" title="Email" novalidate/>
     </fieldset>
+    <fieldset class="form-group">
+        <label>Address</label>
+        <textarea ng-model="businessCtrl.user.address" class="form-control" placeholder="1/2 Abc Street, XYZ City." title="Address"></textarea>
+
+    </fieldset>
+
+
     <fieldset class="form-group">
         <label>Contact Number</label>
         <input ng-model="businessCtrl.user.contact" type="tel" class="form-control" placeholder="+9112345678" title="Contact Number" novalidate/>
@@ -86,6 +88,8 @@
                 <p style="color:{{ businessCtrl.user.textcolor2 }};">
                     <a ng-href="mailto:{{ businessCtrl.user.email }}">{{ businessCtrl.user.email }}</a>
                 </p>
+                <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.address }}</p>
+
 
                 <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.contact }}</p>
 

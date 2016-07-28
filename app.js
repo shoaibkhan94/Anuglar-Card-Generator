@@ -6,7 +6,7 @@
 
     app.controller('BusinessCardController', function(){
         this.user={name:'',
-            about:'',
+            address:'',
             occupation:'',
             email:'',
             contact:'',
