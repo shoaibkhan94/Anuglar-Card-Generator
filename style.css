@@ -46,6 +46,14 @@ i{
     margin-right:5px;
 }
 
+.title {
+    font-size: 4em;
+    text-align: center;
+    color: #008B8B;
+    border-bottom: 4px double rgba(247, 197, 106, 0.35);
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+}
 
 .card{
     float: left;
