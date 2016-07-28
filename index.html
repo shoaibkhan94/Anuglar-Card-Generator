@@ -80,8 +80,8 @@
 
 
             <div class="details" style="margin-left: 10%">
-                <h1>{{businessCtrl.user.name }}</h1>
-                <h5 style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.occupation }}</h5>
+                <h1>{{businessCtrl.user.name | uppercase}}</h1>
+                <h5 style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.occupation | uppercase}}</h5>
 
                 <hr width="80%" style="margin-right: 20%">
 
@@ -91,7 +91,7 @@
                 <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.address }}</p>
 
 
-                <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.contact }}</p>
+                <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.contact | number}}</p>
 
                 <!--<p style="color:{{ businessCtrl.user.textcolor2 }};">
                     <a ng-href="http://{{ businessCtrl.user.link2 }}">{{ businessCtrl.user.link2 }}</a>
