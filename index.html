@@ -20,6 +20,8 @@
 
 <!--  Review Form -->
     <h4 class="title">Submit your details</h4>
+
+    <input type="checkbox" ng-model="addressCheck" title="AddressCheckBox"/>Include Address
     <fieldset class="form-group">
         <label>Full Name</label>
         <input ng-model="businessCtrl.user.name" class="form-control"  type="text" placeholder="John Doe" title="Full Name"/>
@@ -33,9 +35,9 @@
         <label>E-Mail</label>
         <input ng-model="businessCtrl.user.email" type="email" class="form-control" placeholder="johnDoe@example.org" title="Email" novalidate/>
     </fieldset>
-    <fieldset class="form-group">
+    <fieldset class="form-group" ng-hide="addressCheck">
         <label>Address</label>
-        <textarea ng-model="businessCtrl.user.address" class="form-control" placeholder="1/2 Abc Street, XYZ City." title="Address"></textarea>
+        <textarea ng-model="businessCtrl.user.address" class="form-control" placeholder="1/2 Abc Street, XYZ City." title="Address" ></textarea>
 
     </fieldset>
 
@@ -88,7 +90,7 @@
                 <p style="color:{{ businessCtrl.user.textcolor2 }};">
                     <a ng-href="mailto:{{ businessCtrl.user.email }}">{{ businessCtrl.user.email }}</a>
                 </p>
-                <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.address }}</p>
+                <p ng-hide="addressCheck" style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.address }}</p>
 
 
                 <p style="color:{{ businessCtrl.user.textcolor2 }};">{{ businessCtrl.user.contact}}</p>
